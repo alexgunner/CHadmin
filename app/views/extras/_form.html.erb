@@ -1,0 +1,27 @@
+<%= form_with(model: extra, local: true, html: { multipart: true }) do |form| %>
+  <% if extra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(extra.errors.count, "error") %> prohibited this extra from being saved:</h2>
+
+      <ul>
+      <% extra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :logo %>
+    <%= form.file_field :logo, id: :extra_logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :banner %>
+    <%= form.file_field :banner, id: :extra_banner %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

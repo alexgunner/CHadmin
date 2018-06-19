@@ -1,0 +1,12 @@
+<%= form_tag("/create_product_variant", method: "post") do %>
+	
+  <%= hidden_field_tag(:product_id, @product.id) %>
+
+  <%= label_tag(:size, "Tamaño") %>
+  <%= text_field_tag(:size) %>
+
+  <%= label_tag(:price, "Precio") %>
+  <%= text_field_tag(:price) %>
+
+  <%= submit_tag("Aceptar") %>
+<% end %>

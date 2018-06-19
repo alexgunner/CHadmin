@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Reference code:</strong>
+  <%= @product.reference_code %>
+</p>
+
+<p>
+  <strong>Meausure unit:</strong>
+  <%= @product.measure_unit.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category.name %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @product.subcategory.name %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @product.provider.name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @product.manufacturer.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag @product.picture.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

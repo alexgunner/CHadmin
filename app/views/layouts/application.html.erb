@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo Construcción</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+      <%= render 'shared/header', contact_information: Contact.first, extras: Extra.first %>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <%= render 'shared/left_menu', categories: Category.all, manufacturers: Manufacturer.all, extras: Extra.first %>
+    	       
+            <div class="col-sm-9 padding-right">
+    	        <%= yield %>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    	
+      <%= render 'shared/footer', contact_information: Contact.first %>
+
+  </body>
+</html>

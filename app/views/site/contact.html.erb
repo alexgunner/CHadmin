@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-lg-8">
+    <div id="map"></div>    
+  </div>
+  <div class="col-lg-4">
+    <h4>Dirección</h4>
+    <p>
+      <%= @contact_information.address %>
+    </p>
+
+    <h4>Teléfonos</h4>
+    <p>
+      <%= @contact_information.phone %>
+    </p>
+    <h4>Correo electrónico</h4>
+    <p>
+      <%= @contact_information.email %>
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+      <br>
+      <form>
+        <h2>Deja tu mensaje</h2>
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input type="text" name="email" placeholder="Ingresa tu nombre completo" class="form-control">  
+        </div>
+
+        <div class="form-group">
+          <label>Correo electrónico:</label>
+          <input type="text" name="email" placeholder="Ingresa tu correo electrónico" class="form-control">  
+        </div>
+
+        <div class="form-group">
+          <label>Teléfono:</label>
+          <input type="text" name="email" placeholder="Ingresa tu teléfono" class="form-control">  
+        </div>
+
+        <div class="form-group">
+          <label>Mensaje:</label>
+          <input type="text" name="email" placeholder="Ingresa tu mensaje" rows=10 class="form-control">  
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+        
+      </form>
+  </div>
+</div>
+<script>
+  function initMap() {
+    var uluru = {lat: <%= @contact_information.lat %>, lng: <%= @contact_information.long %>};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy4PzSIG77OtqMciXyhMuTD9tQSICh0LM&callback=initMap">
+</script>
