@@ -1,41 +1,36 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Products</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Reference code</th>
-      <th>Meausure unit</th>
-      <th>Category</th>
-      <th>Subcategory</th>
-      <th>Provider</th>
-      <th>Manufacturer</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
+<h1>Productos</h1>
+<%= link_to 'Crear producto', new_product_path, class: "btn btn-primary" %>
+<div class="table-responsive">
+  <table class="table table-stripped table-hover">
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.reference_code %></td>
-        <td><%= product.measure_unit.name %></td>
-        <td><%= product.category.name %></td>
-        <td><%= product.subcategory.name %></td>
-        <td><%= product.provider.name %></td>
-        <td><%= product.manufacturer.name %></td>
-        <td><%= link_to 'Variantes', '/products/' + product.id.to_s + '/product_variants' %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Código de referencia</th>
+        <th>Unidad de medida</th>
+        <th>Categoría</th>
+        <th>Subcategoría</th>
+        <th>Proveedor</th>
+        <th>Fabricante</th>
+        <th colspan="2"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Product', new_product_path %>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description.truncate(100) %></td>
+          <td><%= product.reference_code %></td>
+          <td><%= product.measure_unit.name %></td>
+          <td><%= product.category.name %></td>
+          <td><%= product.subcategory.name %></td>
+          <td><%= product.provider.name %></td>
+          <td><%= product.manufacturer.name %></td>
+          <td><%= link_to 'Variantes', '/products/' + product.id.to_s + '/product_variants' %></td>
+          <td><%= link_to 'Editar', edit_product_path(product) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

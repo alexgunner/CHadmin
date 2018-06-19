@@ -1,12 +1,19 @@
+<h1>Crear variante de <%= @product.name %> (<%= @product.reference_code %>)</h1>
 <%= form_tag("/create_product_variant", method: "post") do %>
 	
   <%= hidden_field_tag(:product_id, @product.id) %>
 
-  <%= label_tag(:size, "Tamaño") %>
-  <%= text_field_tag(:size) %>
+  <div class="form-group">
+  	<%= label_tag(:size, "Tamaño (#{@product.measure_unit.name})") %>
+  	<%= text_field_tag :size, nil, class: "form-control" %>
+  </div>
 
-  <%= label_tag(:price, "Precio") %>
-  <%= text_field_tag(:price) %>
+  <div class="form-group">
+  	<%= label_tag(:price, "Precio") %>
+  	<%= text_field_tag :price, nil, class: "form-control" %>	
+  </div>
+  
 
-  <%= submit_tag("Aceptar") %>
+  <%= submit_tag "Aceptar", class: "btn btn-success" %>
+  <%= link_to "Cancelar", "/products/" + @product.id.to_s + "/product_variants", class: "btn btn-danger" %>
 <% end %>

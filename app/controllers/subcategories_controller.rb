@@ -1,6 +1,7 @@
 class SubcategoriesController < ApplicationController
   before_action :set_subcategory, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  layout "dashboard"
   # GET /subcategories
   # GET /subcategories.json
   def index
@@ -28,7 +29,7 @@ class SubcategoriesController < ApplicationController
 
     respond_to do |format|
       if @subcategory.save
-        format.html { redirect_to @subcategory, notice: 'Subcategory was successfully created.' }
+        format.html { redirect_to subcategories_url, notice: 'Correctamente creado' }
         format.json { render :show, status: :created, location: @subcategory }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class SubcategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @subcategory.update(subcategory_params)
-        format.html { redirect_to @subcategory, notice: 'Subcategory was successfully updated.' }
+        format.html { redirect_to subcategories_url, notice: 'Correctamente actualizado' }
         format.json { render :show, status: :ok, location: @subcategory }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class SubcategoriesController < ApplicationController
   def destroy
     @subcategory.destroy
     respond_to do |format|
-      format.html { redirect_to subcategories_url, notice: 'Subcategory was successfully destroyed.' }
+      format.html { redirect_to subcategories_url, notice: 'Correctamente eliminado' }
       format.json { head :no_content }
     end
   end

@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :measure_unit_name %>
+  <div class="form-group">
+    <%= form.label "Nombre" %>
+    <%= form.text_field :name, id: :measure_unit_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :abbreviation %>
-    <%= form.text_field :abbreviation, id: :measure_unit_abbreviation %>
+  <div class="form-group">
+    <%= form.label "Abreviatura" %>
+    <%= form.text_field :abbreviation, id: :measure_unit_abbreviation, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", "/measure_units", class: "btn btn-danger" %>
   </div>
 <% end %>

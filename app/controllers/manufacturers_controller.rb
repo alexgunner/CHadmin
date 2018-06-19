@@ -1,6 +1,7 @@
 class ManufacturersController < ApplicationController
   before_action :set_manufacturer, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  layout "dashboard"
   # GET /manufacturers
   # GET /manufacturers.json
   def index
@@ -28,7 +29,7 @@ class ManufacturersController < ApplicationController
 
     respond_to do |format|
       if @manufacturer.save
-        format.html { redirect_to @manufacturer, notice: 'Manufacturer was successfully created.' }
+        format.html { redirect_to manufacturers_url, notice: 'Correctamente creado' }
         format.json { render :show, status: :created, location: @manufacturer }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class ManufacturersController < ApplicationController
   def update
     respond_to do |format|
       if @manufacturer.update(manufacturer_params)
-        format.html { redirect_to @manufacturer, notice: 'Manufacturer was successfully updated.' }
+        format.html { redirect_to manufacturers_url, notice: 'Correctamente actualizado' }
         format.json { render :show, status: :ok, location: @manufacturer }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class ManufacturersController < ApplicationController
   def destroy
     @manufacturer.destroy
     respond_to do |format|
-      format.html { redirect_to manufacturers_url, notice: 'Manufacturer was successfully destroyed.' }
+      format.html { redirect_to manufacturers_url, notice: 'Correctamente eliminado' }
       format.json { head :no_content }
     end
   end

@@ -1,6 +1,7 @@
 class ExtrasController < ApplicationController
   before_action :set_extra, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  layout "dashboard"
   # GET /extras
   # GET /extras.json
   def index
@@ -28,7 +29,7 @@ class ExtrasController < ApplicationController
 
     respond_to do |format|
       if @extra.save
-        format.html { redirect_to @extra, notice: 'Extra was successfully created.' }
+        format.html { redirect_to extras_url, notice: 'Correctamente creado' }
         format.json { render :show, status: :created, location: @extra }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class ExtrasController < ApplicationController
   def update
     respond_to do |format|
       if @extra.update(extra_params)
-        format.html { redirect_to @extra, notice: 'Extra was successfully updated.' }
+        format.html { redirect_to '/extras/1/edit', notice: 'Correctamente actualizado' }
         format.json { render :show, status: :ok, location: @extra }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class ExtrasController < ApplicationController
   def destroy
     @extra.destroy
     respond_to do |format|
-      format.html { redirect_to extras_url, notice: 'Extra was successfully destroyed.' }
+      format.html { redirect_to extras_url, notice: 'Correctamente eliminado' }
       format.json { head :no_content }
     end
   end

@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <%= form.hidden_field :name %>
+
+  <div class="form-group">
     <%= form.label :logo %>
-    <%= form.file_field :logo, id: :extra_logo %>
+    <%= form.file_field :logo, id: :extra_logo, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :banner %>
-    <%= form.file_field :banner, id: :extra_banner %>
+    <%= form.file_field :banner, id: :extra_banner, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
   </div>
 <% end %>

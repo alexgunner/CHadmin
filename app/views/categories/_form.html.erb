@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :category_name %>
+  <div class="form-group">
+    <%= form.label "Nombre" %>
+    <%= form.text_field :name, id: :category_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :category_description %>
+  <div class="form-group">
+    <%= form.label "Descripción" %>
+    <%= form.text_field :description, id: :category_description, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture, id: :category_picture %>
+  <div class="form-group">
+    <%= form.label "Imagen" %>
+    <%= form.file_field :picture, id: :category_picture, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", "/categories", class: "btn btn-danger" %>
   </div>
 <% end %>

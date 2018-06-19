@@ -1,6 +1,7 @@
 class MeasureUnitsController < ApplicationController
   before_action :set_measure_unit, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  layout "dashboard"
   # GET /measure_units
   # GET /measure_units.json
   def index
@@ -28,7 +29,7 @@ class MeasureUnitsController < ApplicationController
 
     respond_to do |format|
       if @measure_unit.save
-        format.html { redirect_to @measure_unit, notice: 'Measure unit was successfully created.' }
+        format.html { redirect_to measure_units_url, notice: 'Correctamente creado' }
         format.json { render :show, status: :created, location: @measure_unit }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class MeasureUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @measure_unit.update(measure_unit_params)
-        format.html { redirect_to @measure_unit, notice: 'Measure unit was successfully updated.' }
+        format.html { redirect_to measure_units_url, notice: 'Correctamente actualizado' }
         format.json { render :show, status: :ok, location: @measure_unit }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class MeasureUnitsController < ApplicationController
   def destroy
     @measure_unit.destroy
     respond_to do |format|
-      format.html { redirect_to measure_units_url, notice: 'Measure unit was successfully destroyed.' }
+      format.html { redirect_to measure_units_url, notice: 'Correctamente eliminado' }
       format.json { head :no_content }
     end
   end

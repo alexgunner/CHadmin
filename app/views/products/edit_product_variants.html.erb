@@ -1,14 +1,20 @@
+<h1>Editar variante de <%= @product_variant.product.name %> (<%= @product_variant.product.reference_code %>)</h1>
 <%= form_tag("/update_product_variant", method: "patch") do %>
 	
   <%= hidden_field_tag(:product_id, @product_variant.product_id) %>
 
   <%= hidden_field_tag(:variant_id, @product_variant.id) %>
 
-  <%= label_tag(:size, "Tamaño") %>
-  <%= text_field_tag(:size, @product_variant.variant_size) %>
+  <div class="form-group">
+  	<%= label_tag(:size, "Tamaño (#{@product_variant.product.measure_unit.name})") %>
+  	<%= text_field_tag :size, @product_variant.variant_size, class: "form-control" %>
+  </div>
 
-  <%= label_tag(:price, "Precio") %>
-  <%= text_field_tag(:price, @product_variant.price) %>
+  <div class="form-group">
+  	<%= label_tag(:price, "Precio") %>
+  	<%= text_field_tag :price, @product_variant.price, class: "form-control" %>
+  </div>
 
-  <%= submit_tag("Aceptar") %>
+  <%= submit_tag "Aceptar", class: "btn btn-success" %>
+  <%= link_to "Cancelar", "/products/" + @product_variant.product_id.to_s + "/product_variants", class: "btn btn-danger" %>
 <% end %>

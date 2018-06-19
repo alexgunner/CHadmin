@@ -11,52 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :contact_phone %>
+  <div class="form-group">
+    <%= form.label "Teléfonos" %>
+    <%= form.text_field :phone, id: :contact_phone, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :contact_address %>
+  <div class="form-group">
+    <%= form.label "Dirección" %>
+    <%= form.text_field :address, id: :contact_address, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :contact_email %>
+  <div class="form-group">
+    <%= form.label "Correo electrónico" %>
+    <%= form.text_field :email, id: :contact_email, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :lat %>
-    <%= form.text_field :lat, id: :contact_lat %>
+  <div class="form-group">
+    <%= form.label "Latitud" %>
+    <%= form.text_field :lat, id: :contact_lat, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :long %>
-    <%= form.text_field :long, id: :contact_long %>
+  <div class="form-group">
+    <%= form.label "Longitud" %>
+    <%= form.text_field :long, id: :contact_long, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook, id: :contact_facebook %>
+  <div class="form-group">
+    <%= form.label "Facebook" %>
+    <%= form.text_field :facebook, id: :contact_facebook, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :about %>
-    <%= form.text_field :about, id: :contact_about %>
+  <div class="form-group">
+    <%= form.label "Introducción de nosotros" %>
+    <%= form.text_field :about, id: :contact_about, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :mission %>
-    <%= form.text_field :mission, id: :contact_mission %>
+  <div class="form-group">
+    <%= form.label "Misión" %>
+    <%= form.text_field :mission, id: :contact_mission, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :vision %>
-    <%= form.text_field :vision, id: :contact_vision %>
+  <div class="form-group">
+    <%= form.label "Visión" %>
+    <%= form.text_field :vision, id: :contact_vision, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
   </div>
 <% end %>

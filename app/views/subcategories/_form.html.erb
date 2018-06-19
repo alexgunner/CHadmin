@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :subcategory_name %>
+  <div class="form-group">
+    <%= form.label "Nombre" %>
+    <%= form.text_field :name, id: :subcategory_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :subcategory_description %>
+  <div class="form-group">
+    <%= form.label "Descripción" %>
+    <%= form.text_field :description, id: :subcategory_description, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, id: :subcategory_category_id %>
+  <div class="form-group">
+    <%= form.label "Categoría" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, id: :subcategory_category_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture, id: :subcategory_picture_id %>
+  <div class="form-group">
+    <%= form.label "Imagen" %>
+    <%= form.file_field :picture, id: :subcategory_picture_id, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", "/subcategories", class: "btn btn-danger" %>
   </div>
 <% end %>

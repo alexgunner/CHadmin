@@ -11,52 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+  <div class="form-group">
+    <%= form.label "Nombre" %>
+    <%= form.text_field :name, id: :product_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :product_description %>
+  <div class="form-group">
+    <%= form.label "Descripción" %>
+    <%= form.text_field :description, id: :product_description, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :reference_code %>
-    <%= form.text_field :reference_code, id: :product_reference_code %>
+  <div class="form-group">
+    <%= form.label "Código de referencia" %>
+    <%= form.text_field :reference_code, id: :product_reference_code, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :measure_unit_id %>
-    <%= form.collection_select :measure_unit_id, MeasureUnit.all, :id, :name, id: :product_meausure_unit_id %>
+  <div class="form-group">
+    <%= form.label "Unidad de medida" %>
+    <%= form.collection_select :measure_unit_id, MeasureUnit.all, :id, :name, id: :product_meausure_unit_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, id: :product_category_id %>
+  <div class="form-group">
+    <%= form.label "Categoría" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, id: :product_category_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :subcategory_id %>
-    <%= form.collection_select :subcategory_id, Subcategory.all, :id, :name, id: :product_subcategory_id %>
+  <div class="form-group">
+    <%= form.label "Subcategoría" %>
+    <%= form.collection_select :subcategory_id, Subcategory.all, :id, :name, id: :product_subcategory_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :provider_id %>
-    <%= form.collection_select :provider_id, Provider.all, :id, :name, id: :product_provider_id %>
+  <div class="form-group">
+    <%= form.label "Proveedor" %>
+    <%= form.collection_select :provider_id, Provider.all, :id, :name, id: :product_provider_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :manufacturer_id %>
-    <%= form.collection_select :manufacturer_id, Manufacturer.all, :id, :name, id: :product_manufacturer_id %>
+  <div class="form-group">
+    <%= form.label "Fabricante" %>
+    <%= form.collection_select :manufacturer_id, Manufacturer.all, :id, :name, id: :product_manufacturer_id, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture, id: :product_picture_id %>
+  <div class="form-group">
+    <%= form.label "Imagen" %>
+    <%= form.file_field :picture, id: :product_picture_id, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", "/products", class: "btn btn-danger" %>
   </div>
 <% end %>
