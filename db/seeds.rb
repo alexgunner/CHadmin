@@ -10,4 +10,4 @@
 #measure_unit = MeasureUnit.create(name: "Centímetros", abbreviation: "cm")
 #manufacturer = Manufacturer.create(name: "Manufacturer 1", description: "This is a test manufacturer", address: "This is a test address", email: "test@test.com", phone: "77777777", country: "Bolivia", city: "Cochabamba")
 #provider = Provider.create(name: "Provider 1", description: "This is a test provider", address: "This is a test address", email: "test@test.com", phone: "77777777", country: "Bolivia", city: "Cochabamba")
-Contact.create(phone: "77498233", address: "Av. Salamanca #123", email: "contacto@todo-construccion.com", lat: "-17.385076", long: "-66.153274", facebook: "http://facebook.com", about_us: "This is a test", mission: "Mission", vision: "Vision")
+Contact.create(phone: "77498233", address: "Av. Salamanca #123", email: "contacto@todo-construccion.com", lat: "-17.385076", long: "-66.153274", facebook: "http://facebook.com", about: "This is a test", mission: "Mission", vision: "Vision")
