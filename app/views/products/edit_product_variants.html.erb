@@ -1,4 +1,4 @@
-<h1>Editar variante de <%= @product_variant.product.name %> (<%= @product_variant.product.reference_code %>)</h1>
+<h1>Editar variante de <%= @product_variant.product.name %> (<%= @product_variant.reference_code %>)</h1>
 <%= form_tag("/update_product_variant", method: "patch") do %>
 	
   <%= hidden_field_tag(:product_id, @product_variant.product_id) %>
@@ -13,6 +13,16 @@
   <div class="form-group">
   	<%= label_tag(:price, "Precio") %>
   	<%= text_field_tag :price, @product_variant.price, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:description, "Descripción") %>
+    <%= text_field_tag :description, @product_variant.description, class: "form-control" %>  
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:reference_code, "Código de referencia") %>
+    <%= text_field_tag :reference_code, @product_variant.reference_code, class: "form-control" %>  
   </div>
 
   <%= submit_tag "Aceptar", class: "btn btn-success" %>

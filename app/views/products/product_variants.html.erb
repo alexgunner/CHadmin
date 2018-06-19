@@ -1,4 +1,4 @@
-<h1>Variantes del producto <%= @product.name %> (<%= @product.reference_code %>)</h1>
+<h1>Variantes del producto <%= @product.name %></h1>
 <%= link_to 'Nueva variante', '/products/' + @product.id.to_s + '/product_variants/new', class: "btn btn-primary" %>
 <div class="table-responsive">
   <table class="table table-hover table-stripped">
@@ -6,6 +6,8 @@
       <tr>
         <th>Tamaño</th>
         <th>Precio</th>
+        <th>Descripción</th>
+        <th>Código de referencia</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -15,6 +17,8 @@
         <tr>
           <td><%= variant.variant_size %></td>
           <td>Bs. <%= variant.price %></td>
+          <td><%= variant.description %></td>
+          <td><%= variant.reference_code %></td>
           <td><%= link_to 'Editar', '/products/' + @product.id.to_s + '/product_variants/' + variant.id.to_s + '/edit' %></td>
         </tr>
       <% end %>

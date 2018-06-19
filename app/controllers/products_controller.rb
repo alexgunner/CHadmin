@@ -73,7 +73,7 @@ class ProductsController < ApplicationController
 
   def create_product_variant
     product = Product.find(params[:product_id])
-    ProductVariant.create(variant_size: params[:size], price: params[:price], product: product)
+    ProductVariant.create(variant_size: params[:size], price: params[:price], product: product, description: params[:description], reference_code: params[:reference_code])
     redirect_to '/products/' + product.id.to_s + '/product_variants'
   end
 
@@ -85,6 +85,8 @@ class ProductsController < ApplicationController
     product = Product.find(params[:product_id])
     @product_variant.variant_size = params[:size]
     @product_variant.price = params[:price]
+    @product_variant.description = params[:description]
+    @product_variant.reference_code = params[:reference_code]
     @product_variant.save
     redirect_to '/products/' + product.id.to_s + '/product_variants'
   end
