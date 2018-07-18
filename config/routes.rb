@@ -27,9 +27,11 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   get '/about_us' => 'site#about_us'
   get '/product_categories' => 'site#product_categories'
+  get '/product_offers' => 'site#product_offers'
   get '/category_products/:id' => 'site#category_products'
   get '/subcategory_products/:id' => 'site#subcategory_products'
   get '/manufacturer_products/:id' => 'site#manufacturer_products'
+
 
   # Dashboard views
   get '/dashboard' => 'dashboard#index'

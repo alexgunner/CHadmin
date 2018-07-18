@@ -4,11 +4,6 @@
   <%= hidden_field_tag(:product_id, @product.id) %>
 
   <div class="form-group">
-  	<%= label_tag(:size, "Tamaño (#{@product.measure_unit.name})") %>
-  	<%= text_field_tag :size, nil, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
   	<%= label_tag(:price, "Precio") %>
   	<%= text_field_tag :price, nil, class: "form-control" %>	
   </div>

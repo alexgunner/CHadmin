@@ -1,7 +1,9 @@
 class SiteController < ApplicationController
+	before_action :set_categories
+
 	def index
-		@categories = Category.order(name: :asc)
-		@newest_products = Product.order(created_at: :desc).take(6)
+		
+		@products_in_offer = Product.where(offer: true)
 	end
 
 	def contact
@@ -13,7 +15,11 @@ class SiteController < ApplicationController
 	end
 
 	def product_categories
-		@categories = Category.order(name: :asc)
+		
+	end
+
+	def product_offers
+		@products_in_offer = Product.where(offer: true)
 	end
 
 	def category_products
@@ -26,5 +32,10 @@ class SiteController < ApplicationController
 
 	def manufacturer_products
 		@manufacturer = Manufacturer.find(params[:id])
+	end
+
+	private
+	def set_categories
+		@categories = Category.order(name: :asc)
 	end
 end

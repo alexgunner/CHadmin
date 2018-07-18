@@ -9,4 +9,12 @@ class Product < ApplicationRecord
   belongs_to :manufacturer
 
   has_many :product_variants
+
+  def in_offer
+  	if self.offer
+  		return "Sí"
+  	else
+  		return "No"
+  	end
+  end
 end

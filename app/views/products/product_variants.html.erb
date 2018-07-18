@@ -4,7 +4,6 @@
   <table class="table table-hover table-stripped">
     <thead>
       <tr>
-        <th>Tamaño</th>
         <th>Precio</th>
         <th>Descripción</th>
         <th>Código de referencia</th>
@@ -15,7 +14,6 @@
     <tbody>
       <% @product.product_variants.each do |variant| %>
         <tr>
-          <td><%= variant.variant_size %></td>
           <td>Bs. <%= variant.price %></td>
           <td><%= variant.description %></td>
           <td><%= variant.reference_code %></td>

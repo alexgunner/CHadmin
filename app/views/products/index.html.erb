@@ -11,6 +11,7 @@
         <th>Subcategoría</th>
         <th>Proveedor</th>
         <th>Fabricante</th>
+        <th>En oferta</th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -25,6 +26,7 @@
           <td><%= product.subcategory.name %></td>
           <td><%= product.provider.name %></td>
           <td><%= product.manufacturer.name %></td>
+          <td><%= product.in_offer %></td>
           <td><%= link_to 'Variantes', '/products/' + product.id.to_s + '/product_variants' %></td>
           <td><%= link_to 'Editar', edit_product_path(product) %></td>
         </tr>
