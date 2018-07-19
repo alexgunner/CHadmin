@@ -70,11 +70,13 @@
 						</ul>
 					</div>
 				</div>
-				<!--<div class="col-sm-3">
+				<div class="col-sm-3">
 					<div class="search_box pull-right">
-						<input type="text" placeholder="Buscar"/>
+						<%= form_tag("/search", method: "get") do %>
+							<%= text_field_tag :name, nil, placeholder: "Buscar" %>
+						<% end %>
 					</div>
-				</div>-->
+				</div>
 			</div>
 		</div>
 	</div><!--/header-bottom-->

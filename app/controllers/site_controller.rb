@@ -34,6 +34,17 @@ class SiteController < ApplicationController
 		@manufacturer = Manufacturer.find(params[:id])
 	end
 
+	def search
+		search_name = params[:name].to_s
+		search_name = search_name.downcase
+		@products = []
+		Product.all.each do |product|
+			if product.name.downcase.include? search_name
+				@products.push product
+			end
+		end
+	end
+
 	private
 	def set_categories
 		@categories = Category.order(name: :asc)
