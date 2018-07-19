@@ -51,6 +51,7 @@
 							        					<th>Descripción</th>
 							        					<th>Código</th>
 							        					<th>Precio</th>
+							        					<th>Fecha de reposición</th>							        					
 							        				</thead>
 							        				<tbody>
 							        					<% product.product_variants.each do |variant| %>
@@ -64,6 +65,13 @@
 							        							<td align="left">
 							        								Bs. <%= variant.price %>
 							        							</td>
+							        							<% if variant.reposition %>
+							        								<td align="left">
+							        									<%= variant.reposition_date %>
+							        								</td>
+							        							<% else %>
+							        								<td align="left">Disponible</td>
+							        							<% end %>
 							        						</tr>
 							        					<% end %>
 							        				</tbody>

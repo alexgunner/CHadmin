@@ -20,6 +20,16 @@
     <%= text_field_tag :reference_code, @product_variant.reference_code, class: "form-control" %>  
   </div>
 
+  <div class="form-group">
+    <%= label_tag(:reposition, "Reposición") %>
+    <%= check_box_tag :reposition, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:reposition_date, "Reposición") %>
+    <%= date_field_tag :reposition_date, @product_variant.reposition_date, class: "form-control" %>
+  </div>
+
   <%= submit_tag "Aceptar", class: "btn btn-success" %>
   <%= link_to "Cancelar", "/products/" + @product_variant.product_id.to_s + "/product_variants", class: "btn btn-danger" %>
 <% end %>
