@@ -38,7 +38,9 @@
 						        		<p class="justified-text">
 						        			<strong>Fabricante: </strong><%= product.manufacturer.name %> - <strong>Industria: </strong><%= product.manufacturer.country %>	
 						        		</p>
-						        		
+						        		<p class="justified-text">
+						        			<%= link_to "Descargar ficha técnica", product.details.url, target: "_blank", class: "btn btn-primary" %>
+						        		</p>
 						        	</div>
 						        </div>
 						        <% if product.product_variants.count != 0 %>
