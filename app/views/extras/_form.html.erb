@@ -23,6 +23,11 @@
     <%= form.file_field :banner, id: :extra_banner, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= form.label "Servicios" %>
+    <%= form.text_area :services, id: :extra_services, class: "form-control" %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Aceptar", class: "btn btn-success" %>
   </div>

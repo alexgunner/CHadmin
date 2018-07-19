@@ -34,6 +34,10 @@ class SiteController < ApplicationController
 		@manufacturer = Manufacturer.find(params[:id])
 	end
 
+	def services
+		@services = Extra.first.services
+	end
+
 	def search
 		search_name = params[:name].to_s
 		search_name = search_name.downcase

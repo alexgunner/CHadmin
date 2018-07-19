@@ -70,6 +70,6 @@ class ExtrasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def extra_params
-      params.require(:extra).permit(:name, :logo, :banner)
+      params.require(:extra).permit(:name, :logo, :banner, :services)
     end
 end

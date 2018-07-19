@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/subcategory_products/:id' => 'site#subcategory_products'
   get '/manufacturer_products/:id' => 'site#manufacturer_products'
   get '/search' => 'site#search'
+  get '/services' => 'site#services'
 
 
   # Dashboard views
