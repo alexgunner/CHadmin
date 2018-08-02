@@ -59,7 +59,7 @@ a#scrollUp {
   bottom: 0px;
   right: 10px;
   padding: 5px 10px;
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #FFF;
   -webkit-animation: bounce 2s ease infinite;
   animation: bounce 2s ease infinite;
@@ -172,13 +172,13 @@ a#scrollUp i{
 }
 
 .usa:hover {
-	background:#FE980F;
+	background:rgb(10,32, 120);
 	color:#fff;
-	border-color:#FE980F;
+	border-color:rgb(10,32, 120);
 }
 
 .usa:active, .usa.active {
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 rgb(10,32, 120);
   box-shadow: inherit;
   outline: 0 none;
 }
@@ -189,7 +189,7 @@ a#scrollUp i{
 }
 
 .dropdown-menu  li  a:hover, .dropdown-menu  li  a:focus {
-  background-color: #FE980F;
+  background-color: rgb(10,32, 120);
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -225,7 +225,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li a:hover {
-	color:#fe980f;
+	color:rgb(10,32, 120);
 	background:#fff;
 }
 
@@ -259,7 +259,7 @@ a#scrollUp i{
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
 	background:none;
-	color:#fdb45e;
+	color:rgb(10,32,120);
 }
 
 .search_box input {
@@ -312,7 +312,7 @@ ul.sub-menu {
 }
 
 .dropdown ul.sub-menu li .active{
-  color: #FDB45E;
+  color: rgb(10,32,120);
   padding-left: 0;
 }
 
@@ -330,7 +330,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: #FDB45E;
+    color: rgb(10,32,120);
 }
 
 .fa-angle-down{
@@ -377,7 +377,7 @@ ul.sub-menu {
 }
 
 .companyinfo h2  span{
-  color:#FE980F;
+  color:rgb(10,32, 120);
 }
 
 .companyinfo p {
@@ -415,7 +415,7 @@ ul.sub-menu {
   top: 0;
   width: 100%;
   height: 61px;
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border-radius: 3px;
   color: #FFF;
   font-size: 20px;
@@ -511,7 +511,7 @@ ul.sub-menu {
 
 .single-widget ul li a:hover{
 	background:none;
-	color:#FE980F;
+	color:rgb(10,32, 120);
 }
 
 
@@ -528,7 +528,7 @@ ul.sub-menu {
 
 
 .searchform button {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: medium none;
   border-radius: 0;
   margin-left: -5px;
@@ -543,7 +543,7 @@ ul.sub-menu {
 
 .searchform  button:hover, 
 .searchform  button:focus{
-	background-color:#FE980F;
+	background-color:rgb(10,32, 120);
 }
 
 .searchform p {
@@ -567,7 +567,7 @@ ul.sub-menu {
 }
 
 .footer-bottom p span a {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-style: italic;
   text-decoration: underline;
 }
@@ -587,7 +587,7 @@ ul.sub-menu {
 }
 
 .carousel-indicators li.active {
-	  background: #FE980F;
+	  background: rgb(10,32, 120);
 }
 
 .item {
@@ -613,7 +613,7 @@ ul.sub-menu {
 }
 
 .item h1 span {
-	color:#FE980F;
+	color:rgb(10,32, 120);
 }
 
 .item h2 {
@@ -633,7 +633,7 @@ ul.sub-menu {
 }
 
 .get {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -645,7 +645,7 @@ ul.sub-menu {
 
 
 .item button:hover {
-  background: #FE980F;
+  background: rgb(10,32, 120);
 }
 
 .control-carousel {
@@ -656,7 +656,7 @@ ul.sub-menu {
 }
 
 .control-carousel:hover{
-  color: #FE980F ;
+  color: rgb(10,32, 120) ;
 }
 
 .right {
@@ -670,7 +670,7 @@ ul.sub-menu {
   padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -734,7 +734,7 @@ h2.title:before{
 .category-products .panel-default .panel-heading .panel-title a {
   color: #696763;
   font-family: 'Roboto', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -766,8 +766,8 @@ h2.title:before{
 .panel-body ul li a {
   color: #696763;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
+  font-size: 14px;
+  
 }
 
 .brands-name {
@@ -817,7 +817,7 @@ h2.title:before{
 
 
 .tooltip-inner {
-  background-color: #FE980F;
+  background-color: rgb(10,32, 120);
   border-radius: 4px;
   color: #FFFFFF;
   max-width: 200px;
@@ -827,7 +827,7 @@ h2.title:before{
 }
 
 .tooltip.top .tooltip-arrow {
-  border-top-color: #FE980F;
+  border-top-color: rgb(10,32, 120);
   border-width: 5px 5px 0;
   bottom: 0;
   left: 50%;
@@ -844,12 +844,12 @@ h2.title:before{
 }
 
 h4 {
-  color: #FE980F;
+  color: rgb(10,32, 120);
 }
 
 .btn-success {
-  background-color: #FE980F;
-  border-color: #FE980F;
+  background-color: rgb(10,32, 120);
+  border-color: rgb(10,32, 120);
 }
 
 .btn-success:hover {
@@ -858,7 +858,7 @@ h4 {
 }
 
 h2.title {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -893,7 +893,7 @@ h2.title {
 }
 
 .productinfo h2{
-	color: #FE980F;
+	color: rgb(10,32, 120);
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
@@ -922,7 +922,7 @@ h2.title {
 }
 
 .product-overlay {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   top: 0;
   display: none;
   height: 0;
@@ -951,7 +951,7 @@ h2.title {
   background:#fff;
   border: 0 none;
   border-radius: 0;
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   margin-bottom: 25px;
@@ -959,7 +959,7 @@ h2.title {
 
 .product-overlay .add-to-cart:hover {
   background:#fff;
-  color: #FE980F;
+  color: rgb(10,32, 120);
 }
 
 
@@ -983,7 +983,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -998,7 +998,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #FFFFFF;
 }
 
@@ -1020,7 +1020,7 @@ h2.title {
 
 .choose ul li a:hover{
 	background:none;
-	color:#FE980F;
+	color:rgb(10,32, 120);
 }
 
 .category-tab {
@@ -1029,7 +1029,7 @@ h2.title {
 
 .category-tab ul {
   background: #40403E;
-  border-bottom: 1px solid #FE980F;
+  border-bottom: 1px solid rgb(10,32, 120);
   list-style: none outside none;
   margin: 0 0 30px;
   padding: 0;
@@ -1047,7 +1047,7 @@ h2.title {
 }
 
 .category-tab ul  li  a:hover{
-	background:#FE980F;
+	background:rgb(10,32, 120);
 	color:#fff;
 }
 
@@ -1056,7 +1056,7 @@ h2.title {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background-color: #FE980F;
+  background-color: rgb(10,32, 120);
   border:0px;
   color: #FFFFFF;
   cursor: default;
@@ -1085,7 +1085,7 @@ h2.title {
 }
 
 .recommended-item-control i {
-  background: none repeat scroll 0 0 #FE980F;
+  background: none repeat scroll 0 0 rgb(10,32, 120);
   color: #FFFFFF;
   font-size: 20px;
   padding: 4px 10px;
@@ -1144,8 +1144,8 @@ h2.title {
 }
 
 .pagination  .active  a, .pagination  .active  span, .pagination  .active  a:hover, .pagination  .active  span:hover, .pagination  .active  a:focus, .pagination  .active  span:focus {
-  background-color: #FE980F;
-  border-color: #FE980F;
+  background-color: rgb(10,32, 120);
+  border-color: rgb(10,32, 120);
   color: #FFFFFF;
   cursor: default;
   z-index: 2;
@@ -1165,7 +1165,7 @@ h2.title {
 }
 
 .pagination  li  a:hover{
-	background:#FE980F;
+	background:rgb(10,32, 120);
 	color:#fff;
 }
 
@@ -1209,7 +1209,7 @@ h2.title {
 }
 
 .view-product h3 {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   bottom: 0;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
@@ -1235,7 +1235,7 @@ h2.title {
   top: 35%;
 }
 .item-control i {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #FFFFFF;
   font-size: 20px;
   padding: 5px 10px;
@@ -1280,7 +1280,7 @@ h2.title {
 }
 
 .product-information span span {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   float: left;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -1313,7 +1313,7 @@ h2.title {
 
 
 .cart {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1358,13 +1358,13 @@ h2.title {
 }
 
 #reviews ul li a i{
-	color:#FE980F;
+	color:rgb(10,32, 120);
 	padding-right:8px;
 }
 
 #reviews ul li a:hover{
 	background:#fff;
-	color:#FE980F;
+	color:rgb(10,32, 120);
 }
 
 #reviews p{
@@ -1404,7 +1404,7 @@ h2.title {
 }
 
 #reviews button {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1443,7 +1443,7 @@ h2.title {
 }
 
 .content-404 h2 a {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 44px;
@@ -1511,7 +1511,7 @@ h2.title {
 }
 
 .login-form form button, .signup-form form button {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: medium none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1536,7 +1536,7 @@ h2.title {
 
 
 .or{
-	background: #FE980F;
+	background: rgb(10,32, 120);
 	border-radius: 40px;
 	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
@@ -1568,7 +1568,7 @@ h2.title {
 }
 
 .breadcrumbs .breadcrumb li a {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   color: #FFFFFF;
   padding: 3px 7px;
 }
@@ -1579,7 +1579,7 @@ h2.title {
   width: auto;
   border-width: 8px;
   border-style: solid;
-  border-color:transparent transparent transparent #FE980F;
+  border-color:transparent transparent transparent rgb(10,32, 120);
   position: absolute;
   top: 11px;
   left:48px;
@@ -1597,7 +1597,7 @@ h2.title {
 
 
 #cart_items .cart_info .cart_menu {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #fff;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -1652,7 +1652,7 @@ h2.title {
 
 
 #cart_items .cart_info .cart_total_price {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-size: 24px;
 }
 
@@ -1699,7 +1699,7 @@ h2.title {
 }
 
 .cart_delete a:hover {
-  background:#FE980F
+  background:rgb(10,32, 120)
 }
 
 
@@ -1804,7 +1804,7 @@ h2.title {
 }
 
 .update, .check_out {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border-radius: 0;
   color: #FFFFFF;
   margin-top: 18px;
@@ -1871,7 +1871,7 @@ h2.title {
 }
 
 .checkout-options .nav li a {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-size: 18px;
   font-weight: normal;
   padding: 0
@@ -1885,7 +1885,7 @@ h2.title {
   margin-right: 10px;
   border-radius: 50%;
   padding: 5px;
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color:#fff;
   font-size: 14px;
   padding: 2px 3px;
@@ -1916,7 +1916,7 @@ h2.title {
 
 
 .shopper-info .btn-primary {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   margin-right: 15px;
@@ -2001,7 +2001,7 @@ h2.title {
 
 #cart_items .cart_info 
 .table.table-condensed.total-result span {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   font-weight: 700;
   font-size: 16px
 }
@@ -2072,7 +2072,7 @@ h2.title {
 
 .blog-post-area 
 .post-meta ul li i {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   color: #FFFFFF;
   margin-left: -4px;
   margin-right: 7px;
@@ -2086,7 +2086,7 @@ h2.title {
   position: absolute;
   width: auto;
   height: auto;
-  border-color:transparent transparent transparent #FE980F;
+  border-color:transparent transparent transparent rgb(10,32, 120);
   border-width:4px;
   border-style: solid;
   top:6px;
@@ -2096,7 +2096,7 @@ h2.title {
 .blog-post-area 
 .post-meta ul span {
   float: right;
-  color: #FE980F
+  color: rgb(10,32, 120)
 }
 
 .post-meta span{
@@ -2104,14 +2104,14 @@ h2.title {
 }
 
 .post-meta span i{
-  color: #FE980F
+  color: rgb(10,32, 120)
 }
 
 
 .blog-post-area  
 .single-blog-post 
 .btn-primary {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   border: medium none;
   border-radius: 0;
   color: #FFFFFF;
@@ -2138,7 +2138,7 @@ h2.title {
 .pagination li a:hover,
 .pagination-area 
 .pagination li .active {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   color: #fff
 }
 
@@ -2166,7 +2166,7 @@ h2.title {
 
 .pager-area 
 .pager li a:hover {
-  background: #FE980F;
+  background: rgb(10,32, 120);
   color: #fff
 }
 
@@ -2204,7 +2204,7 @@ h2.title {
 .rating-area 
 .ratings .color, 
 .rating-area .color {
-  color: #FE980F
+  color: rgb(10,32, 120)
 }
 
 
@@ -2293,7 +2293,7 @@ h2.title {
 
 .blog-socials ul li a:hover {
   color: #fff;
-  background:#FE980F
+  background:rgb(10,32, 120)
 }
 
 
@@ -2357,7 +2357,7 @@ h2.title {
 }
 
 .sinlge-post-meta li i {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   color: #FFFFFF;
   margin-right: 10px;
   padding: 8px 10px;
@@ -2384,7 +2384,7 @@ h2.title {
 }
 
 .replay-box label {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   color: #FFFFFF;
   margin-bottom: 15px;
   padding: 3px 15px;
@@ -2393,7 +2393,7 @@ h2.title {
 }
 
 .replay-box span {
-  color: #FE980F;
+  color: rgb(10,32, 120);
   float: right;
   font-weight: 700;
   margin-top: 21px;
@@ -2410,7 +2410,7 @@ h2.title {
 
 .replay-box form input:hover, 
 .text-area textarea:hover {
-  border: 1px solid #FE980F;
+  border: 1px solid rgb(10,32, 120);
 }
 
 .text-area {
@@ -2423,7 +2423,7 @@ h2.title {
 }
 
 .btn.btn-primary {
-  background:#FE980F;
+  background:rgb(10,32, 120);
   border: 0 none;
   border-radius: 0;
   margin-top: 16px;
@@ -2440,7 +2440,7 @@ h2.title {
   height: auto;
   border-style: solid;
   border-width: 8px;
-  border-color:#FE980F transparent transparent transparent;
+  border-color:rgb(10,32, 120) transparent transparent transparent;
   top: 25px;
   left: 5px
 } 
@@ -2497,7 +2497,7 @@ h2.title {
 #contact-page .form-control:focus, 
 #contact-page .form-control:hover {
   box-shadow: inherit;
-  border-color: #FDB45E;
+  border-color: rgb(10,32,120);
 }
 
 #contact-page .contact-info {
@@ -2548,7 +2548,7 @@ h2.title {
 }
 
 .contact-info .social-networks ul li a:hover{
-  color: #FE980F;
+  color: rgb(10,32, 120);
 }
 
 
