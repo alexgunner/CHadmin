@@ -27,6 +27,16 @@
     <%= label_tag(:reposition_date, "Reposición") %>
     <%= date_field_tag :reposition_date, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+    <%= label_tag(:offer, "En Oferta?") %>
+    <%= check_box_tag :offer, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:offer_price, "Precio de oferta") %>
+    <%= number_field_tag :offer_price, nil, class: "form-control" %>  
+  </div>
   
 
   <%= submit_tag "Aceptar", class: "btn btn-success" %>

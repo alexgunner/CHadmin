@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180719060927) do
+ActiveRecord::Schema.define(version: 20180802191825) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 20180719060927) do
     t.string "reference_code"
     t.boolean "reposition"
     t.date "reposition_date"
+    t.boolean "offer"
+    t.float "offer_price"
     t.index ["product_id"], name: "index_product_variants_on_product_id"
   end
 

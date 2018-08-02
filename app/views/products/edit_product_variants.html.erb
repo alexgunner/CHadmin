@@ -30,6 +30,16 @@
     <%= date_field_tag :reposition_date, @product_variant.reposition_date, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= label_tag(:offer, "En Oferta?") %>
+    <%= check_box_tag :offer, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag(:offer_price, "Precio de oferta") %>
+    <%= number_field_tag :offer_price, nil, class: "form-control" %>  
+  </div>
+
   <%= submit_tag "Aceptar", class: "btn btn-success" %>
   <%= link_to "Cancelar", "/products/" + @product_variant.product_id.to_s + "/product_variants", class: "btn btn-danger" %>
 <% end %>

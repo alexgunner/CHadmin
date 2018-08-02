@@ -7,6 +7,8 @@
         <th>Precio</th>
         <th>Descripción</th>
         <th>Código de referencia</th>
+        <th>En oferta?</th>
+        <th>Precion oferta</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -17,6 +19,20 @@
           <td>Bs. <%= variant.price %></td>
           <td><%= variant.description %></td>
           <td><%= variant.reference_code %></td>
+          <td>
+            <% if variant.offer.nil? %>
+              No
+            <% else %>
+              Sí
+            <% end %>
+          </td>
+          <td>
+            <% if variant.offer.nil? %>
+              No hay oferta
+            <% else %>
+              <%= variant.offer_price %>
+            <% end %>
+          </td>
           <td><%= link_to 'Editar', '/products/' + @product.id.to_s + '/product_variants/' + variant.id.to_s + '/edit' %></td>
         </tr>
       <% end %>

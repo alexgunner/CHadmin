@@ -67,7 +67,11 @@
 							        								<%= variant.reference_code %>
 							        							</td>
 							        							<td align="left">
-							        								Bs. <%= variant.price %>
+							        								<% if variant.offer.nil? %>
+							        									Bs. <%= variant.price %>
+							        								<% else %>
+							        									OFERTA: Bs. <%= variant.offer_price %>
+							        								<% end %>
 							        							</td>
 							        							<% if variant.reposition %>
 							        								<td align="left">

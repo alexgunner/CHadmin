@@ -73,7 +73,14 @@ class ProductsController < ApplicationController
 
   def create_product_variant
     product = Product.find(params[:product_id])
-    ProductVariant.create(variant_size: params[:size], price: params[:price], product: product, description: params[:description], reference_code: params[:reference_code], reposition: params[:reposition], reposition_date: params[:reposition_date])
+    variant = ProductVariant.create(variant_size: params[:size], price: params[:price], product: product, description: params[:description], reference_code: params[:reference_code], reposition: params[:reposition], reposition_date: params[:reposition_date], offer: params[:offer], offer_price: params[:offer_price])
+    if variant.offer == true
+      product.offer = true
+    else
+      product.offer = false
+    end
+    
+    product.save
     redirect_to '/products/' + product.id.to_s + '/product_variants'
   end
 
@@ -89,7 +96,15 @@ class ProductsController < ApplicationController
     @product_variant.reference_code = params[:reference_code]
     @product_variant.reposition = params[:reposition]
     @product_variant.reposition_date = params[:reposition_date]
+    @product_variant.offer = params[:offer]
+    @product_variant.offer_price = params[:offer_price]
     @product_variant.save
+    if @product_variant.offer == true
+      product.offer = true
+    else
+      product.offer = false
+    end
+    product.save
     redirect_to '/products/' + product.id.to_s + '/product_variants'
   end
 
