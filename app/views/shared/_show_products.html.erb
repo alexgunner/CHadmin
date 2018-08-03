@@ -52,19 +52,20 @@
 							        		<div class="table-responsive">
 							        			<table class="table table-striped table-hover">
 							        				<thead>
-							        					<th>Descripción</th>
 							        					<th>Código</th>
+							        					<th>Descripción</th>
 							        					<th>Precio</th>
 							        					<th>Fecha de reposición</th>							        					
 							        				</thead>
 							        				<tbody>
 							        					<% product.product_variants.each do |variant| %>
 							        						<tr>
-							        							<td align="left">
-							        								<%= variant.description %>
-							        							</td>
+							        							
 							        							<td align="justify">
 							        								<%= variant.reference_code %>
+							        							</td>
+							        							<td align="left">
+							        								<%= variant.description %>
 							        							</td>
 							        							<td align="left">
 							        								<% if variant.offer.nil? %>

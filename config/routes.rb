@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :frequent_questions
   devise_for :users
   resources :extras
   resources :contacts

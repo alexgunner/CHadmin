@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @frequent_question.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @frequent_question.answer %>
+</p>
+
+<%= link_to 'Edit', edit_frequent_question_path(@frequent_question) %> |
+<%= link_to 'Back', frequent_questions_path %>
