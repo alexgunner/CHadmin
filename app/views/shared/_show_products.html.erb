@@ -20,23 +20,22 @@
 						      </div>
 						      <div class="modal-body">
 						        <div class="row">
-						        	<div class="col-lg-12">
+						        	<div class="col-lg-6">
 						        		<center>
 						        			<%= image_tag product.picture.url(:original), class: "img-responsive" %>
 						        		</center>
 						        	</div>
-						        </div>
-						        <div class="row">
-						        	<div class="col-lg-12">
-						        		<p class="justified-text">
+											<div class="col-lg-6">
+												<p class="justified-text">
 						        			<%= product.description %>
 						        		</p>
-						        	</div>
+											</div>
 						        </div>
+
 						        <div class="row">
 						        	<div class="col-lg-12">
 						        		<p class="justified-text">
-						        			<strong>Fabricante: </strong><%= product.manufacturer.name %> - <strong>Industria: </strong><%= product.manufacturer.country %>	
+						        			<strong>Fabricante: </strong><%= product.manufacturer.name %> - <strong>Industria: </strong><%= product.manufacturer.country %>
 						        		</p>
 						        		<% if product.details.url != "/details/original/missing.png" %>
 							        		<p class="justified-text">
@@ -55,12 +54,12 @@
 							        					<th>Código</th>
 							        					<th>Descripción</th>
 							        					<th>Precio</th>
-							        					<th>Fecha de reposición</th>							        					
+							        					<th>Fecha de reposición</th>
 							        				</thead>
 							        				<tbody>
 							        					<% product.product_variants.each do |variant| %>
 							        						<tr>
-							        							
+
 							        							<td align="justify">
 							        								<%= variant.reference_code %>
 							        							</td>
