@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @delivery.bus %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @delivery.destination %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @delivery.cost %>
+</p>
+
+<%= link_to 'Edit', edit_delivery_path(@delivery) %> |
+<%= link_to 'Back', deliveries_path %>

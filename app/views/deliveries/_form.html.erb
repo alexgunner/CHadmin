@@ -1,0 +1,34 @@
+<%= form_with(model: delivery, local: true) do |form| %>
+  <% if delivery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+
+      <ul>
+      <% delivery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :bus_id %>
+    <%= form.collection_select :bus_id, Bus.all, :id, :name, id: :delivery_bus_id, class: "form-control" %>
+
+  </div>
+
+  <div class="form-group">
+    <%= form.label :destination_id %>
+    <%= form.collection_select :destination_id, Destination.all, :id, :name, id: :delivery_destination_id, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label "Costo" %>
+    <%= form.number_field :cost, id: :delivery_cost, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Aceptar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", "/deliveries", class: "btn btn-danger" %>
+  </div>
+<% end %>

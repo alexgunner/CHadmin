@@ -1,0 +1,29 @@
+<h1>Envíos</h1>
+<%= link_to 'Nuevo envío', new_delivery_path, class: "btn btn-primary" %>
+<div class="table-responsive">
+  <table class="table table-hover table-stripped">
+    <thead>
+      <tr>
+        <th>Bus</th>
+        <th>Destino</th>
+        <th>Costo</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @deliveries.each do |delivery| %>
+        <tr>
+          <td><%= delivery.bus.name %></td>
+          <td><%= delivery.destination.name %></td>
+          <td>Bs. <%= delivery.cost %></td>
+
+          <td><%= link_to 'Editar', edit_delivery_path(delivery) %></td>
+          <td><%= link_to 'Eliminar', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>

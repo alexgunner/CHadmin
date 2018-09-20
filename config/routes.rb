@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :deliveries
+  resources :destinations
+  resources :buses
   resources :frequent_questions
   devise_for :users
   resources :extras
