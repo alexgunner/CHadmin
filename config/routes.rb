@@ -38,9 +38,13 @@ Rails.application.routes.draw do
   get '/search' => 'site#search'
   get '/services' => 'site#services'
   post '/send_message' => 'site#send_message'
+  get '/login' => 'site#login'
+  post '/create_user' => 'site#create_user'
 
 
   # Dashboard views
   get '/dashboard' => 'dashboard#index'
   get '/messages' => 'dashboard#messages'
+  get '/user_accounts' => 'dashboard#user_accounts'
+  get '/new_user' => 'dashboard#new_user'
 end

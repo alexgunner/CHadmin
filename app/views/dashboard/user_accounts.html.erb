@@ -1,0 +1,36 @@
+<h1>Usuarios registrados</h1>
+<%= link_to 'Nuevo usuario', '/new_user', class: "btn btn-primary" %>
+<div class="table-responsive">
+  <table class="table table-hover table-stripped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Correo electrónico</th>
+        <th>Teléfono</th>
+        <th>Tipo de usuario</th>
+        <th>Fecha de creación</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.lastname %></td>
+          <td><%= user.email %></td>
+          <td><%= user.phone %></td>
+          <td>
+            <% if user.user_type == "normal" %>
+              Usuario común
+            <% end %>
+            <% if user.user_type == "company" %>
+              Usuario de la compañia
+            <% end %>
+          </td>
+          <td><%= user.created_at.strftime("%d-%m-%Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

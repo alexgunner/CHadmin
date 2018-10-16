@@ -58,6 +58,44 @@ class SiteController < ApplicationController
 		redirect_to '/contact', notice: "Tu mensaje fue enviado correctamente. Te enviaremos una respuesta lo antes posible."
 	end
 
+	def login
+
+	end
+
+	def create_user
+		name = params[:name]
+		lastname = params[:lastname]
+		email = params[:email]
+		phone = params[:phone]
+		user_type = params[:user_type]
+		password = params[:password]
+		password_confirmation = params[:password_confirmation]
+		if user_type == "1"
+				u_type = "normal"
+		end
+		if user_type == "2"
+			u_type = "company"
+		end
+
+		if params[:admin] != "1"
+			if password == password_confirmation
+				if UserAccount.where(email: email).count == 0
+					UserAccount.create name: name, lastname: lastname, email: email, phone: phone, user_type: u_type, password: password
+					redirect_to '/login', notice: "Gracias por crear tu cuenta, nos pondremos en contacto contigo cuando el carrito este habilitado"
+				else
+					redirect_to '/login', notice: "Ya creaste una cuenta con este correo electrónico"
+				end
+
+			else
+				redirect_to '/login', notice: "La contraseña y la confirmación de contraseña no coinciden, por favor ingresa tus datos nuevamente"
+			end
+		else
+			UserAccount.create name: name, lastname: lastname, email: email, phone: phone, user_type: u_type, password: password
+			redirect_to '/user_accounts'
+		end
+
+	end
+
 	private
 	def set_categories
 		@categories = Category.order(name: :asc)

@@ -1,0 +1,43 @@
+<%= form_tag("/create_user", method: "post") do %>
+  <div class="form-group">
+    <label>Nombres:</label>
+    <%= text_field_tag :name, nil, placeholder: "Ingresa los nombres", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Apellidos:</label>
+    <%= text_field_tag :lastname, nil, placeholder: "Ingresa los apellidos", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Correo electrónico:</label>
+    <%= text_field_tag :email, nil, placeholder: "Ingresa el correo electrónico", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Teléfono:</label>
+    <%= text_field_tag :phone, nil, placeholder: "Ingresa el teléfono", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Tipo de usuario:</label>
+    <%= select_tag :user_type, options_for_select([["Usuario normal","1"], ["Usuario de empresa","2"]]), class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Contraseña:</label>
+    <%= password_field_tag :password, nil, class: "form-control" %>
+  </div>
+
+  <%= hidden_field_tag :user_type, "1" %>
+  <%= hidden_field_tag :admin, "1" %>
+
+  <div class="form-group">
+    <label>Confirma la contraseña</label>
+    <%= password_field_tag :password_confirmation, nil, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Crear cuenta</button>
+  </div>
+<% end %>
