@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :providers
   resources :subcategories
   resources :categories
-  
+
   # Product variants list
   get '/products/:id/product_variants' => 'products#product_variants'
 
@@ -37,8 +37,10 @@ Rails.application.routes.draw do
   get '/manufacturer_products/:id' => 'site#manufacturer_products'
   get '/search' => 'site#search'
   get '/services' => 'site#services'
+  post '/send_message' => 'site#send_message'
 
 
   # Dashboard views
   get '/dashboard' => 'dashboard#index'
+  get '/messages' => 'dashboard#messages'
 end

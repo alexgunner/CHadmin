@@ -2,7 +2,7 @@ class SiteController < ApplicationController
 	before_action :set_categories
 
 	def index
-		
+
 		@products_in_offer = Product.where(offer: true)
 	end
 
@@ -15,7 +15,7 @@ class SiteController < ApplicationController
 	end
 
 	def product_categories
-		
+
 	end
 
 	def product_offers
@@ -47,6 +47,15 @@ class SiteController < ApplicationController
 				@products.push product
 			end
 		end
+	end
+
+	def send_message
+		name = params[:name]
+		email = params[:email]
+		phone = params[:phone]
+		message_content = params[:message_content]
+		Message.create name: name, email: email, phone: phone, message_content: message_content
+		redirect_to '/contact', notice: "Tu mensaje fue enviado correctamente. Te enviaremos una respuesta lo antes posible."
 	end
 
 	private

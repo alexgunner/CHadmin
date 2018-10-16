@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :bus_id %>
+    <%= form.label "Medio de envío" %>
     <%= form.collection_select :bus_id, Bus.all, :id, :name, id: :delivery_bus_id, class: "form-control" %>
 
   </div>
 
   <div class="form-group">
-    <%= form.label :destination_id %>
+    <%= form.label "Destino" %>
     <%= form.collection_select :destination_id, Destination.all, :id, :name, id: :delivery_destination_id, class: "form-control" %>
   </div>
 
